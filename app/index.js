@@ -1,23 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-
-// you can render different environments eg IOS environment
-// so that is why you import ReactDOM separate from React
-
-//Components have three aspects - it manages state, lifecycle (eg fetching
-//data from an api) and UI
-
+import Popular from './components/Popular'
 
 class App extends React.Component {
   render() {
-    return (<div>Hello Lisa</div>)  // this is jsx, babel converts it into js
+    return (
+      <div className='container'>
+        <Popular />
+      </div>
+    )
   }
 }
 
 ReactDOM.render(
-  // this takes two arguments - the React Element and where
-  //to render the Element to
-  <App />, //the react element
+  <App />,
   document.getElementById('app')
 )
